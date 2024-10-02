@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Павлеса Олег ПП-21</title>
+		<style>
+			.dynamic-style {
+				text-align: center;
+				font-size: 20px;
+				color: blue;
+				margin: 10px;
+			}
+			.result-box {
+				border: 2px solid green;
+				padding: 20px;
+				background-color: lightyellow;
+				display: inline-block;
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			"use strict";
+
+			document.write("<h2>Динамічне формування сторінки за допомогою JavaScript</h2>");
+
+			let today = new Date();
+			document.write('<p class="dynamic-style">Сьогоднішня дата: ' + today.toLocaleDateString() + '</p>');
+
+			document.write('<h3 style="color:green;">Обчислення математичних виразів</h3>');
+			document.write('<p class="dynamic-style">Нижче ви побачите результат складних обчислень.</p>');
+
+			let a = parseFloat(prompt("Введіть значення для a:", ""));
+			let b = parseFloat(prompt("Введіть значення для b:", ""));
+			let sum = a + b;
+			let diff = a - b;
+			let product = a * b;
+			let quotient = (b !== 0) ? (a / b) : "Ділення на нуль неможливе";
+
+			document.write('<div class="result-box">');
+			document.write("<p>Сума: " + sum.toFixed(2) + "</p>");
+			document.write("<p>Різниця: " + diff.toFixed(2) + "</p>");
+			document.write("<p>Добуток: " + product.toFixed(2) + "</p>");
+			document.write("<p>Частка: " + quotient + "</p>");
+			document.write('</div>');
+
+			document.write("<p>Кінець динамічного формування сторінки</p>");
+		</script>
+	</body>
+</html>
